@@ -2,11 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const images = [
-    "https://images.unsplash.com/photo-1519225421980-715cb0201b28?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1511285560982-1351cdeb9821?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80",
     "https://images.unsplash.com/photo-1507915977619-6ccfe8003ae6?auto=format&fit=crop&w=600&q=80",
     "https://images.unsplash.com/photo-1520342868574-5fa3804e551c?auto=format&fit=crop&w=600&q=80",
-    "https://images.unsplash.com/photo-1522673607200-1645062cd958?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80",
     "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=600&q=80"
 ];
 
