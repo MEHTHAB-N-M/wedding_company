@@ -22,6 +22,7 @@ body {
   color: var(--text-dark);
   background-color: #f9f9f9;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1,
@@ -178,8 +179,9 @@ ul {
 .hero-content {
   position: relative;
   z-index: 1;
+  width: 100%;
   max-width: 800px;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   animation: fadeIn 1.5s ease-out;
 }
 
@@ -228,11 +230,16 @@ ul {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero-content {
+    padding: 1.25rem 0.75rem;
+  }
+
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 1.85rem;
+    line-height: 1.25;
   }
 
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
