@@ -15,11 +15,12 @@ app_file: dist/index.html
 
 A responsive, elegant, and modern web application for a luxury wedding planning and event management company, built with React 19 and Vite.
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://mehthab07-wedding-company.hf.space/)
 [![React](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Hugging Face Spaces](https://img.shields.io/badge/Deployed_on-Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces)
+[![Hugging Face Spaces](https://img.shields.io/badge/Space-Mehthab07%2Fwedding--company-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces/Mehthab07/wedding-company)
 
-[Report Bug](https://github.com/MEHTHAB-N-M/wedding_company/issues) · [Request Feature](https://github.com/MEHTHAB-N-M/wedding_company/issues)
+[Live Demo](https://mehthab07-wedding-company.hf.space/) · [Hugging Face Space](https://huggingface.co/spaces/Mehthab07/wedding-company) · [Report Bug](https://github.com/MEHTHAB-N-M/wedding_company/issues) · [Request Feature](https://github.com/MEHTHAB-N-M/wedding_company/issues)
 
 </div>
 
