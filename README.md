@@ -1,15 +1,25 @@
+---
+title: Wedding Company
+emoji: 💍
+colorFrom: yellow
+colorTo: pink
+sdk: static
+pinned: false
+app_build_command: npm run build
+app_file: dist/index.html
+---
+
 <div align="center">
 
 # 💍 Wedding Company Website
 
 A responsive, elegant, and modern web application for a luxury wedding planning and event management company, built with React 19 and Vite.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-wedding--company-gold?style=for-the-badge&logo=render&logoColor=white)](https://wedding-company-2-49p1.onrender.com/)
 [![React](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Render](https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://wedding-company-2-49p1.onrender.com/)
+[![Hugging Face Spaces](https://img.shields.io/badge/Deployed_on-Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/spaces)
 
-[Live Demo](https://wedding-company-2-49p1.onrender.com/) · [Report Bug](https://github.com/MEHTHAB-N-M/wedding_company/issues) · [Request Feature](https://github.com/MEHTHAB-N-M/wedding_company/issues)
+[Report Bug](https://github.com/MEHTHAB-N-M/wedding_company/issues) · [Request Feature](https://github.com/MEHTHAB-N-M/wedding_company/issues)
 
 </div>
 
@@ -77,8 +87,7 @@ Built with **React 19**, styled using custom gold & slate-gray design tokens, an
 | **Animations** | Framer Motion (`^12.33.0`) | Smooth transitions and keyframe fade-ins |
 | **SEO & Head** | React Helmet Async (`^2.0.5`) | Dynamic per-route `<title>` and `<meta>` tags |
 | **Build Tool** | Vite (`^7.2.4`) | High-speed ESM bundler and dev server |
-| **Code Quality** | ESLint (`^9.39.1`) | Linting and code consistency rules |
-| **Hosting** | Render | Static site hosting via `render.yaml` with SPA rewrite rules |
+| **Hosting** | Hugging Face Spaces | Static HTML space with automated Vite build & SPA HashRouter |
 
 ---
 
@@ -115,8 +124,7 @@ wedding_company/
 ├── eslint.config.js              # ESLint configuration
 ├── index.html                    # Root HTML document with viewport meta
 ├── package.json                  # Dependencies, scripts, and overrides
-├── render.yaml                   # Render static site blueprint with SPA routing
-└── vite.config.js                # Vite configuration with React plugin
+└── vite.config.js                # Vite configuration with React plugin and relative base
 ```
 
 ---
@@ -166,20 +174,35 @@ In the project directory, you can run:
 
 ## ☁️ Deployment
 
-The project is pre-configured for automated deployment on **Render** via the included [`render.yaml`](./render.yaml).
+The project is pre-configured for deployment on **Hugging Face Spaces** using the **Static** Space SDK (no Docker required).
 
-### Deploying to Render
+### Deploying to Hugging Face Spaces
 
-1. Push your repository to **GitHub**.
-2. Go to the [Render Dashboard](https://dashboard.render.com/).
-3. Choose **New** → **Blueprint** and connect your repository (Render will automatically read `render.yaml`).
-   *Alternatively, create a **Static Site** with these settings:*
-   - **Build Command:** `npm run build`
-   - **Publish Directory:** `dist`
-   - **Rewrite Rule:** Source `/*` → Destination `/index.html` (for SPA client-side routing)
-4. Trigger the deployment.
+#### Option A: Direct Push to Hugging Face Space Repository
 
-🌐 **Live Website:** [https://wedding-company-2-49p1.onrender.com/](https://wedding-company-2-49p1.onrender.com/)
+1. **Create a new Space on Hugging Face:**
+   - Go to [huggingface.co/new-space](https://huggingface.co/new-space).
+   - Enter your Space name (e.g., `wedding-company`).
+   - Select **Static** as the Space SDK.
+   - Choose **Public** or **Private**.
+   - Click **Create Space**.
+
+2. **Add Hugging Face as a Git remote:**
+   ```bash
+   git remote add space https://huggingface.co/spaces/<YOUR_HF_USERNAME>/<YOUR_SPACE_NAME>
+   ```
+
+3. **Push to your Space:**
+   ```bash
+   git push space main
+   ```
+   *(If prompted for password, provide your Hugging Face Access Token with **Write** permission from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)).*
+
+4. Hugging Face reads the configuration from the top of [`README.md`](./README.md), automatically executes `npm run build`, and serves the live application from `dist/index.html`.
+
+#### Option B: Syncing from GitHub
+
+1. In your Hugging Face Space settings, you can link your **GitHub repository** or configure a GitHub Action to automatically push changes to your Hugging Face Space repository upon each commit.
 
 ---
 
